@@ -18,15 +18,26 @@ Deno.serve(async r => {
     <script type="module">
     import { bogbot } from 'https://esm.sh/gh/evbogue/bog5@1fd476c/bogbot.js'
 
-    const ws = new WebSocket('wss://pub.wiredove.net')
+    await bogbot.start('wiredovedbversion1')
 
-    ws.onopen = () => {
-      ws.send('${yaml.image}')
+    const ws = new WebSocket('wss://pub.wiredove.net/')
+
+    const img = await bogbot.get('${yaml.image}')
+
+    if (img) {
+      const el = document.getElementById('${yaml.image}')
+      el.src = img 
+    }
+
+    ws.onopen = async () => {
+      if (!img) {
+        ws.send('${yaml.image}')
+      }
     }
 
     ws.onmessage = async (m) => {
+      await bogbot.make(m.data)
       const hash = await bogbot.hash(m.data)
-      console.log(m.data)
       if (hash === '${yaml.image}') {
         const img = document.getElementById(hash)
         img.src = m.data
