@@ -18,7 +18,7 @@ Deno.serve(async r => {
     <script type="module">
     import { bogbot } from 'https://esm.sh/gh/evbogue/bog5@1fd476c/bogbot.js'
 
-    const ws = new WebSocket('ws://146.190.37.114:9000')
+    const ws = new WebSocket('wss://pub.wiredove.net')
 
     ws.onopen = () => {
       ws.send('${yaml.image}')
