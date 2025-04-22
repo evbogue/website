@@ -48,7 +48,7 @@ Deno.serve(async r => {
         
   <body>
   <h1>The Latest</h1>
-  <div><a href="https://wiredove.net/#${latest.sig}" style="float: right">${await bogbot.human(latest.ts)}</a><img id=${yaml.image} style='float: left; width: 75px; height: 75px; object-fit: cover; margin-right: 1em;' /> <a href="https://wiredove.net/${latest.author}">${yaml.name}</a></div>
+  <div><a href="https://wiredove.net/#${latest.sig}" style="float: right">${await bogbot.human(latest.ts)}</a><img id=${yaml.image} style='float: left; width: 75px; height: 75px; object-fit: cover; margin-right: 1em;' /> <a href="https://wiredove.net/#${latest.author}">${yaml.name}</a></div>
   <div>${marked(yaml.body)}</div>
   <div><a href="https://wiredove.net/#${latest.sig}" style="float: right">More on Wiredove &#8594;</a></div>
   <hr>
