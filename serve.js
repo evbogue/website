@@ -10,6 +10,8 @@ Deno.serve(async r => {
 <html>
   <head>
     <title>${yaml.name} | ${yaml.body.substring(0, 15)}...</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name='viewport' content='width=device-width initial-scale=1' />
     <style>body { margin-left: auto; margin-right: auto; width: 680px; max-width: 100%; background: #f5f5f5; font-family: sans-serif; } 
       a {color: #666; text-decoration: none;}
       img { border-radius: 15px;}
