@@ -12,8 +12,14 @@ Deno.serve(async r => {
     <title>${yaml.name} | ${yaml.body.substring(0, 15)}...</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name='viewport' content='width=device-width initial-scale=1' />
-    <style>body { margin-left: auto; margin-right: auto; width: 680px; max-width: 100%; background: #f5f5f5; font-family: sans-serif; } 
-      a {color: #666; text-decoration: none;}
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <style>
+      body { margin-left: auto; margin-right: auto; width: 680px; background: #f5f5f5; font-family: "Source Sans 3", sans-serif; } 
+      @media only screen and (max-width: 680px) {
+        body { width: 90%; margin-left: 1em; margin-right: 1em; max-width: 100%; }
+      }
+ 
+      a {color: #0088cc; text-decoration: none;}
       img { border-radius: 15px;}
       hr { border: 1px solid #e4e4e4; width: 100%;}
     </style>
@@ -49,12 +55,11 @@ Deno.serve(async r => {
   </head>
         
   <body>
-  <h1>The Latest</h1>
+  <h1>Everett Bogue</h1>
   <div><a href="https://wiredove.net/#${latest.sig}" style="float: right">${await bogbot.human(latest.ts)}</a><img id=${yaml.image} style='float: left; width: 75px; height: 75px; object-fit: cover; margin-right: 1em;' /> <a href="https://wiredove.net/#${latest.author}">${yaml.name}</a></div>
   <div>${marked(yaml.body)}</div>
   <div><a href="https://wiredove.net/#${latest.sig}" style="float: right">More on Wiredove &#8594;</a></div>
   <hr>
-  <h1>Everett Bogue</h1>
   <p>&#128231; <a href="mailto:ev@evbogue.com">ev@evbogue.com</a></p>
   <p>&#128241; <a href="tel:773-510-8601">773-510-8601</a></p>
   <p>&#128330; <a href="https://wiredove.net/#ev">ev</a></p>
