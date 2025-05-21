@@ -55,12 +55,13 @@ Deno.serve(async r => {
   </head>
         
   <body>
+  <h1>Everett Bogue</h1>
+  <p>Chicago, Illinois. I'm an isomorphic JavaScript developer focused on distributed social networking systems. I'm also a professional kayaker.</p>
+  <hr>
   <div><a href="https://wiredove.net/#${latest.sig}" style="float: right">${await bogbot.human(latest.ts)}</a><img id=${yaml.image} style='float: left; width: 75px; height: 75px; object-fit: cover; margin-right: 1em;' /> <a href="https://wiredove.net/#${latest.author}">${yaml.name}</a></div>
   <div>${marked(yaml.body)}</div>
   <div><a href="https://wiredove.net/#${latest.sig}" style="float: right">More on Wiredove &#8594;</a></div>
   <hr>
-  <h1>Everett Bogue</h1>
-  <p>Chicago, Illinois. I'm an isomorphic JavaScript developer focused on distributed social networking systems. I'm also a professional kayaker.</p>
   <p>&#128231; <a href="mailto:ev@evbogue.com">ev@evbogue.com</a></p>
   <p>&#128241; <a href="tel:773-510-8601">773-510-8601</a></p>
   <p>&#128330; <a href="https://wiredove.net/#ev">ev</a></p>
