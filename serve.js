@@ -10,8 +10,16 @@ Deno.serve(async r => {
 <html>
   <head>
     <title>${yaml.name} | ${yaml.body.substring(0, 15)}...</title>
-    <style>body { margin-left: auto; margin-right: auto; width: 680px; max-width: 100%; background: #f5f5f5; font-family: sans-serif; } 
-      a {color: #666; text-decoration: none;}
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name='viewport' content='width=device-width initial-scale=1' />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <style>
+      body { margin-left: auto; margin-right: auto; width: 680px; background: #f5f5f5; font-family: "Source Sans 3", sans-serif; } 
+      @media only screen and (max-width: 680px) {
+        body { width: 90%; margin-left: 1em; margin-right: 1em; max-width: 100%; }
+      }
+ 
+      a {color: #0088cc; text-decoration: none;}
       img { border-radius: 15px;}
       hr { border: 1px solid #e4e4e4; width: 100%;}
     </style>
@@ -47,7 +55,6 @@ Deno.serve(async r => {
   </head>
         
   <body>
-  <h1>The Latest</h1>
   <div><a href="https://wiredove.net/#${latest.sig}" style="float: right">${await bogbot.human(latest.ts)}</a><img id=${yaml.image} style='float: left; width: 75px; height: 75px; object-fit: cover; margin-right: 1em;' /> <a href="https://wiredove.net/#${latest.author}">${yaml.name}</a></div>
   <div>${marked(yaml.body)}</div>
   <div><a href="https://wiredove.net/#${latest.sig}" style="float: right">More on Wiredove &#8594;</a></div>
@@ -59,9 +66,9 @@ Deno.serve(async r => {
   <p>&#128330; <a href="https://wiredove.net/#ev">ev</a></p>
   <p>&#129419; <a href="https://bsky.app/profile/evbogue.com">evbogue.com</a></p>
   <p><img src="https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png" style="width: 25px; height: 25px; margin: 0; margin-left: -5px; vertical-align: middle;" /> <a href="https://github.com/evbogue">evbogue</a></p>
-  <p><img src="https://www.linkedin.com/favicon.ico" style="width: 22px; height: 22px; margin: 0; margin-right: 5px; margin-left: -3px; vertical-align: middle;" /><a href="https://linkedin.com/in/evbogue/">evbogue</a>
+  <p><img src="https://www.linkedin.com/favicon.ico" style="width: 21px; height: 21px; margin: 0; margin-right: 5px; margin-left: -3px; vertical-align: middle;" /><a href="https://linkedin.com/in/evbogue/">evbogue</a>
   <hr>
-  <p style='color: #777;'>&#169;Copyright 2025 Everett Bogue</p>
+  <p style='color: #555; font-size: .8em; font-weight: bold;'>&#169; Copyright 2025 Everett Bogue</p>
   </body>
 </html>
   `
