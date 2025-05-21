@@ -53,11 +53,15 @@ Deno.serve(async r => {
   <div><a href="https://wiredove.net/#${latest.sig}" style="float: right">More on Wiredove &#8594;</a></div>
   <hr>
   <h1>Everett Bogue</h1>
+  <p>Chicago, Illinois. I'm an isomorphic JavaScript developer focused on distributed social networking systems. Also a professional kayaker.</p>
   <p>&#128231; <a href="mailto:ev@evbogue.com">ev@evbogue.com</a></p>
   <p>&#128241; <a href="tel:773-510-8601">773-510-8601</a></p>
   <p>&#128330; <a href="https://wiredove.net/#ev">ev</a></p>
   <p>&#129419; <a href="https://bsky.app/profile/evbogue.com">evbogue.com</a></p>
   <p><img src="https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png" style="width: 25px; height: 25px; margin: 0; margin-left: -5px; vertical-align: middle;" /> <a href="https://github.com/evbogue">evbogue</a></p>
+  <p><img src="https://www.linkedin.com/favicon.ico" style="width: 22px; height: 22px; margin: 0; margin-right: 5px; margin-left: -3px; vertical-align: middle;" /><a href="https://linkedin.com/in/evbogue/">evbogue</a>
+  <hr>
+  <p style='color: #777;'>&#169;Copyright 2025 Everett Bogue</p>
   </body>
 </html>
   `
